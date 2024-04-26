@@ -1,0 +1,107 @@
+body {
+  font-size: 13px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background-color: hsl(0, 0%, 81%);
+}
+
+.container {
+  max-width: 1060px;
+  margin: 48px auto;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(4, 1fr);
+  position: relative;
+}
+.container > * {
+  padding: 24px;
+  border-radius: 8px;
+}
+.container .testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.container .testimonial-author .author-img {
+  width: 32px;
+  border-radius: 50%;
+}
+.container .testimonial-author .author-info {
+  display: flex;
+  flex-direction: column;
+}
+.container .testimonial-author .author-info .author-name {
+  font-weight: 500;
+}
+.container .testimonial-author .author-info .author-graduate {
+  color: hsl(217, 19%, 35%);
+}
+.container .testimonial-content-header {
+  margin: 16px 0;
+  line-height: 1.3;
+}
+.container .testimonial-content-description {
+  line-height: 1.4;
+}
+.container [class*=dark] .author-info .author-name {
+  color: hsl(0, 0%, 100%);
+}
+.container [class*=dark] .author-info .author-graduate {
+  color: rgba(255, 255, 255, 0.5);
+}
+.container [class*=dark] .testimonial-content-header {
+  color: hsl(210, 46%, 95%);
+}
+.container [class*=dark] .testimonial-content-description {
+  color: rgba(255, 255, 255, 0.7);
+}
+.container .daniels-testimonial {
+  background-color: hsl(263, 55%, 52%);
+  grid-column: 1/3;
+}
+.container .daniels-testimonial .author-img {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+.container .daniels-testimonial > *:not(:first-child) {
+  position: relative;
+  z-index: 2;
+}
+.container .daniels-testimonial .bg-pattern-quotation {
+  position: absolute;
+  left: 345px;
+  top: 0;
+  z-index: 1;
+}
+.container .jonathans-testimonial {
+  background-color: hsl(217, 19%, 35%);
+}
+.container .kiras-testimonial {
+  background-color: hsl(0, 0%, 100%);
+  grid-column: 4;
+  grid-row: 1/3;
+}
+.container .jeanettes-testimonial {
+  background-color: hsl(0, 0%, 100%);
+}
+.container .patricks-testimonial {
+  background-color: hsl(219, 29%, 14%);
+  grid-column: 2/4;
+}
+.container .patricks-testimonial .author-img {
+  border: 2px solid hsl(263, 55%, 52%);
+}
+
+@media screen and (max-width: 376px) {
+  .container {
+    max-width: 322px;
+    grid-template-rows: repeat(5, auto);
+    grid-auto-flow: column;
+  }
+  .container [class*=s-testimonial] {
+    grid-row: auto;
+    grid-column: auto;
+    width: 322px;
+  }
+  .container .daniels-testimonial .bg-pattern-quotation {
+    left: 194px;
+  }
+}/*# sourceMappingURL=style.css.map */
